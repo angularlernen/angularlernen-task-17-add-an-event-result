@@ -1,0 +1,16 @@
+<h1>Profiles</h1>
+<div class="row">
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let profile of profiles">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="d-flex justify-content-center mb-4">
+          <app-profile-picture [pictureUrl]="profile.pictureUrl" diameter="150" borderWidth="8" borderColor="#239907" borderWidth="4"></app-profile-picture>
+        </div>
+        <h5 class="card-title">{{profile.firstName}} {{profile.lastName}}</h5>
+        <p class="card-text">{{profile.description}}</p>
+        <a [href]="profile.id" class="btn btn-microevents">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>

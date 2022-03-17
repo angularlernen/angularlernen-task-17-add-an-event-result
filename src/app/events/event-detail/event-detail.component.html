@@ -1,0 +1,28 @@
+<div class="card mt-4" *ngIf="event$ | async as event">
+	<div class="card-header">
+		<small class="text-muted">on {{event.eventDate | date:'shortDate'}}
+          at {{event.eventDate | date:'shortTime'}}</small>
+      </div>
+     
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+             <img class="img-fluid" [src]="event.pictureUrl" alt="Card image cap">
+          </div>
+          <div class="col-12 col-lg-6">
+            <h3 class="card-title">{{event.title}}</h3>
+            <p class="card-text">{{event.shortDescription}}</p>
+            <div class="row">
+              <div *ngFor="let participant of event.participants" class="ml-3 mt-3">
+                <app-profile-picture
+                    [pictureUrl]="participant.pictureUrl"
+                    diameter="80"
+                    borderWidth="2"
+                    outerBorderColor="#239907">
+                </app-profile-picture>
+              </div>
+            </div>
+         </div>
+        </div>  
+      </div>
+    </div>

@@ -1,0 +1,37 @@
+$diameter: 120px;
+
+$frame-color: white;
+$frame-width: 5px;
+
+$border-color: gray;
+$border-width: 2px;
+
+.profilePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+
+  background-color: $frame-color;
+  
+  width: $diameter;
+  height: $diameter;
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border-color;
+  
+  border-radius: 50%;
+
+  img {
+    object-fit: contain;
+    width: $diameter - $frame-width;
+    height: $diameter - $frame-width;
+
+    border-radius: 50%;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
+}

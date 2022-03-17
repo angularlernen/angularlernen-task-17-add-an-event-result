@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-microevents sticky-top">
+  <a class="navbar-brand d-none d-sm-inline-block" [routerLink]="['events']">MicroEvents</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse align-items-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['events']" title="Show all Events">Events</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['profiles']" title="Show all User Profiles">Profiles</a>
+      </li>
+    </ul>
+  </div>
+</nav>

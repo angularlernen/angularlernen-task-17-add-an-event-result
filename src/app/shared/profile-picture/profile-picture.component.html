@@ -1,0 +1,13 @@
+<div class="profilePicture" 
+  [style.backgroundColor]="frameColor"
+  [style.width.px]="diameter"
+  [style.height.px]="diameter"
+  [style.borderColor]="borderColor"
+  [style.borderWidth]="borderWidth"
+  (mouseenter)="onMouseEnter()"
+  (click)="onPictureClicked()">
+  <img 
+    [src]="pictureUrl" 
+    [style.width.px]="innerDiameter"
+    [style.height.px]="innerDiameter">
+</div>
